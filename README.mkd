@@ -2,6 +2,8 @@
 
 stream socket using machines.
 
+(inspired by network-conduit)
+
 ## Install
 
     $ cabal install

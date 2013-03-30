@@ -20,7 +20,8 @@ library
     hs-source-dirs:
         src
     exposed-modules:
-        Network.Machines
+        Network.Machine
+        Network.Machine.Application
     -- other-modules:       
     build-depends:
         base            ==4.5.*,
