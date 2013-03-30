@@ -1,0 +1,25 @@
+# network-machines
+
+stream socket using machines.
+
+## Install
+
+    $ cabal install
+
+## Run example
+
+    $ cabal-dev install-deps
+    $ cabal-dev configure
+    $ cabal-dev build
+    $ cabal-dev ghci
+    > :l test/example.hs
+    > :main
+
+## License
+
+BSD3
+
+----
+
+(c) 2013 krdlab
+
