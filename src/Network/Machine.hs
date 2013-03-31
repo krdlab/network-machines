@@ -1,6 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE FlexibleContexts #-}
-{-# LANGUAGE RankNTypes #-}
 module Network.Machine (
       source
     , sink
@@ -22,12 +21,12 @@ import           Control.Monad                  (forever, void)
 import           Control.Monad.Trans.Control    (MonadBaseControl, control)
 import           Control.Monad.IO.Class         (MonadIO, liftIO)
 import           Control.Exception              (bracket, finally)
-import           Network.Machine.Application   (Application)
-import qualified Network.Machine.Application   as App
+import           Network.Machine.Application    (Application)
+import qualified Network.Machine.Application    as App
 
 source :: MonadIO m => Socket -> SourceT m ByteString
 source sock = M.repeatedly $ do
-    bs <- liftIO $ NS.recv sock 10
+    bs <- liftIO $ NS.recv sock 4096
     if BS.null bs
         then M.stop
         else M.yield bs

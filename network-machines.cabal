@@ -33,10 +33,12 @@ library
         machines        < 3
 
 test-suite test
-    hs-source-dirs: test
-    main-is: example.hs
-    type: exitcode-stdio-1.0
-    cpp-options:   -DTEST
+    type:
+        exitcode-stdio-1.0
+    hs-source-dirs:
+        test
+    main-is:
+        example.hs
     build-depends:
         base,
         text,
